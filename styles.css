@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+}
+.board{
+    margin: auto;
+    margin-top: 200px;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+   
+}
+
+.space{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#s0,#s3,#s6{
+    border-left: none;
+}
+
+#s0,#s1,#s2{
+    border-top: none;
+}
+
+#s2,#s5,#s8{
+    border-right: none;
+}
+
+#s6,#s7,#s8{
+    border-bottom: none;
+}
