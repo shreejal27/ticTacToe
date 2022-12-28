@@ -18,7 +18,7 @@ body{
    
 }
 
-.space{
+.element{
     width: 100px;
     height: 100px;
     border: 1px solid black;
@@ -27,18 +27,18 @@ body{
     align-items: center;
 }
 
-#s0,#s3,#s6{
+#e0,#e3,#e6{
     border-left: none;
 }
 
-#s0,#s1,#s2{
+#e0,#e1,#e2{
     border-top: none;
 }
 
-#s2,#s5,#s8{
+#e2,#e5,#e8{
     border-right: none;
 }
 
-#s6,#s7,#s8{
+#e6,#e7,#e8{
     border-bottom: none;
 }

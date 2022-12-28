@@ -1,13 +1,9 @@
-// const spaces = document.querySelectorAll('space');
-var value=0;
+var elements= document.querySelectorAll(".element"); //class name will give you array like object
 
-var elements= document.getElementsByClassName("element"); //class name will give you array like object
+elements.forEach(element =>{
+  element.addEventListener('click', handleclick);
+});
 
-for (var i=0; i<elements.length;i++){
-  elements[i].addEventListener("click", click());
-}
-
-function click(){
-  console.log("Button CLicked1");
-
+function handleclick(e){
+  console.log("Clicked");
 }
