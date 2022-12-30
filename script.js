@@ -9,10 +9,11 @@ elements.forEach(element =>{
 });
 
 function handleclick(e){
+  const cell = e.target;
   console.log("Clicked");
-
+  placemark(cell);
   swapTurns();
-  //place mark
+
   //check for win
   //check for draw
   //Switch turns
@@ -22,4 +23,14 @@ function swapTurns(){
   console.log(value);
 }
 
+function placemark(cell){
+  if(value == 0){
+
+    cell.style.backgroundColor = "pink";
+  }
+  else{
+    cell.style.backgroundColor = "red";
+
+  }
+}
 
