@@ -27,9 +27,12 @@ function placemark(cell){
   if(value == 0){
 
     cell.style.backgroundColor = "pink";
+    cell.textContent= "X";
+    
   }
   else{
     cell.style.backgroundColor = "red";
+    cell.textContent= "O";
 
   }
 }
