@@ -45,13 +45,13 @@ function swapTurns(){
 
 function placemark(cell){
   if(value == 0){
-    cell.style.backgroundColor = "pink";
+    // cell.style.backgroundColor = "pink";
     cell.textContent= "X";
     // cell.innerHTML = '<img src="image.jpg" alt="A description of the image">';
     
   }
   else{
-    cell.style.backgroundColor = "red";
+    // cell.style.backgroundColor = "red";
     cell.textContent= "O";
 
   }
