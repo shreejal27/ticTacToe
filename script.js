@@ -23,6 +23,7 @@ const checkWin= ()=>{
   wins.forEach(e =>{
       if((boxtext[e[0]].innerHTML === boxtext[e[1]].innerHTML) && (boxtext[e[2]].innerHTML === boxtext[e[1]].innerHTML) && (boxtext[e[0]].innerHTML !== "")){
         document.querySelector(".info").innerText = boxtext[e[0]].innerText + "Won";
+     
       }
   })
 }
@@ -56,4 +57,4 @@ function placemark(cell){
 
   }
 }
-
+ 
