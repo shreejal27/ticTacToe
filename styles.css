@@ -1,14 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: darkred;
+    background-color: #012622;
 }
 
 body{
     margin: 0;
     font-family: 'Water Brush', cursive;
     font-size: 72px;
-    color: yellow;
+    color: silver;
 }
 p{
     font-size: 72px;
@@ -31,7 +31,9 @@ p{
     display: flex;
     justify-content: center;
     align-items: center; 
+    border-color: white;
 }
+
 
 #e0,#e3,#e6{
     border-left: none;
