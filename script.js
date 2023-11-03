@@ -37,7 +37,7 @@ function handleclick(e) {
     return;
   }
   if (checkDraw()) {
-   return;
+    return;
   }
   swapTurns();
 
@@ -99,3 +99,22 @@ const checkDraw = () => {
     gameOver();
   }
 };
+
+
+document.querySelectorAll('.element').forEach(element => {
+  element.addEventListener('mouseover', () => {
+    if (element.textContent === '') {
+      element.setAttribute('data-content', value); // Set the data-content attribute for pseudo-element
+    }
+  });
+
+  element.addEventListener('mouseout', () => {
+    element.removeAttribute('data-content'); // Remove the data-content attribute on mouse out
+  });
+
+  // element.addEventListener('click', () => {
+  //   if (element.textContent === '') {
+  //     element.textContent = value;
+  //   }
+  // });
+});

@@ -33,6 +33,7 @@ p{
     align-items: center; 
     border-color: white;
     border-style: dotted;
+    position: relative;
 }
 
 
@@ -51,3 +52,16 @@ p{
 #e6,#e7,#e8{
     border-bottom: none;
 }
+
+.element:hover:before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
