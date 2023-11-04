@@ -1,55 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0;
     background-color: #012622;
 }
 
-body{
+body {
     margin: 0;
-    font-family: 'Water Brush', cursive;
+    font-family: 'Fredericka the Great', serif;
+    /* font-family: 'Righteous', sans-serif;     */
     font-size: 72px;
     color: silver;
 }
-p{
-    font-size: 72px;
+
+.title {
+    margin-top: 20px;
 }
-.board{
+
+#title {
+    font-size: 72px;
+    text-align: center;
+}
+
+.board {
+    /* border: 1px solid white; */
     margin: auto;
-    margin-top: 50px;
-    width: 250px;
-    height: 250px;
+    margin-top: 100px;
+    width: 310px;
+    height: 310px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
     align-items: center;
 }
 
-.element{
+.element {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    border-color: white;
-    border-style: dotted;
+    align-items: center;
+    border: 2px dotted #C0C0C0;
     position: relative;
 }
 
 
-#e0,#e3,#e6{
+#e0,
+#e3,
+#e6 {
     border-left: none;
 }
 
-#e0,#e1,#e2{
+#e0,
+#e1,
+#e2 {
     border-top: none;
 }
 
-#e2,#e5,#e8{
+#e2,
+#e5,
+#e8 {
     border-right: none;
 }
 
-#e6,#e7,#e8{
+#e6,
+#e7,
+#e8 {
     border-bottom: none;
 }
 
@@ -63,5 +78,5 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-  }
+    font-size: 72px;
+}

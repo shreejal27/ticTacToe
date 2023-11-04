@@ -33,7 +33,7 @@ const checkWin = () => {
     gameOver();
     return true;
   }
-  return false; 
+  return false;
 };
 
 function handleclick(e) {
@@ -113,7 +113,12 @@ const checkDraw = () => {
 document.querySelectorAll('.element').forEach(element => {
   element.addEventListener('mouseover', () => {
     if (element.textContent === '') {
-      element.setAttribute('data-content', value); // Set the data-content attribute for pseudo-element
+      // element.setAttribute('data-content', value); // Set the data-content attribute for pseudo-element
+      if (value === 0) {
+        element.setAttribute('data-content', 'X');
+      } else {
+        element.setAttribute('data-content', 'O');
+      }
     }
   });
 
