@@ -18,16 +18,23 @@ const checkWin = () => {
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-  ]
+  ];
+  let isWin = false;
+
   wins.forEach(e => {
     if ((boxtext[e[0]].innerHTML === boxtext[e[1]].innerHTML) && (boxtext[e[2]].innerHTML === boxtext[e[1]].innerHTML) && (boxtext[e[0]].innerHTML !== "")) {
       // document.querySelector(".info").innerText = boxtext[e[0]].innerText + "Won";
+      isWin = true;
       alert("Player " + boxtext[e[0]].innerText + " Won");
-      console.log("wonnnnnnnnnnnnn");
-      gameOver();
+
     }
-  })
-}
+  });
+  if (isWin) {
+    gameOver();
+    return true;
+  }
+  return false; 
+};
 
 function handleclick(e) {
   const cell = e.target;
@@ -97,7 +104,9 @@ const checkDraw = () => {
   if (isDraw) {
     alert("It's a draw!");
     gameOver();
+    return true; // Return true if a draw is detected
   }
+  return false; // Return false if no draw is detected
 };
 
 
