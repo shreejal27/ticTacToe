@@ -8,25 +8,50 @@ body {
     margin: 0;
     font-family: 'Fredericka the Great', serif;
     /* font-family: 'Righteous', sans-serif;     */
-    font-size: 72px;
     color: silver;
 }
 
 .title {
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 #title {
-    font-size: 72px;
+    font-size: 4rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.counter {
+    height: 7rem;
+    width: 100%;
+}
+
+table {
+    height: 100%;
+    width: auto;
+    font-size: 1.2rem;
+    float: right;
+    margin-right: 20px;
     text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid silver;
+}
+
+th,
+td {
+    padding: 0.5rem;
 }
 
 .board {
     /* border: 1px solid white; */
     margin: auto;
-    margin-top: 100px;
-    width: 310px;
-    height: 310px;
+    margin-top: 3rem;
+    width: 19.4rem;
+    height: 19.4rem;
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
@@ -34,13 +59,14 @@ body {
 }
 
 .element {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px dotted #C0C0C0;
     position: relative;
+    font-size: 4.5rem;
 }
 
 
@@ -78,5 +104,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 72px;
+    font-size: 4.5rem;
 }
