@@ -2,6 +2,9 @@ var value = 0;
 
 var elements = document.querySelectorAll(".element"); //class name will give you array like object
 
+var xCounter = document.getElementById("xWinCounter").innerHTML;
+var yCounter = document.getElementById("yWinCounter").innerHTML;
+var drawCounter= document.getElementById("drawCounter").innerHTML;
 
 elements.forEach(element => {
   element.addEventListener('click', handleclick, { once: true });
@@ -26,7 +29,7 @@ const checkWin = () => {
       // document.querySelector(".info").innerText = boxtext[e[0]].innerText + "Won";
       isWin = true;
       alert("Player " + boxtext[e[0]].innerText + " Won");
-
+      counter(boxtext[e[0]].innerText);
     }
   });
   if (isWin) {
@@ -104,6 +107,7 @@ const checkDraw = () => {
   if (isDraw) {
     alert("It's a draw!");
     gameOver();
+    counter("draw");
     return true; // Return true if a draw is detected
   }
   return false; // Return false if no draw is detected
@@ -132,3 +136,18 @@ document.querySelectorAll('.element').forEach(element => {
   //   }
   // });
 });
+
+function counter(player){
+   if(player == 'X'){
+      xCounter++;
+      document.getElementById("xWinCounter").innerHTML = xCounter;
+   }
+    else if(player == 'O'){
+        yCounter++;
+        document.getElementById("yWinCounter").innerHTML = yCounter;
+    }
+    else{
+        drawCounter++;
+        document.getElementById("drawCounter").innerHTML = drawCounter;
+    }
+}
