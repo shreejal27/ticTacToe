@@ -1,10 +1,12 @@
 var value = 0;
 
+var currentPlayer = 'X';
+
 var elements = document.querySelectorAll(".element"); //class name will give you array like object
 
 var xCounter = document.getElementById("xWinCounter").innerHTML;
 var yCounter = document.getElementById("yWinCounter").innerHTML;
-var drawCounter= document.getElementById("drawCounter").innerHTML;
+var drawCounter = document.getElementById("drawCounter").innerHTML;
 
 elements.forEach(element => {
   element.addEventListener('click', handleclick, { once: true });
@@ -33,6 +35,7 @@ const checkWin = () => {
     }
   });
   if (isWin) {
+    console.log("gameover afterwin");
     gameOver();
     return true;
   }
@@ -44,11 +47,14 @@ function handleclick(e) {
   console.log("Clicked");
   placemark(cell);
   if (checkWin()) {
+    swapTurns();
     return;
   }
   if (checkDraw()) {
+    swapTurns();
     return;
   }
+  console.log("swapped");
   swapTurns();
 
   //check for win
@@ -75,6 +81,7 @@ function placemark(cell) {
 }
 
 function gameOver() {
+  changePlayer();
   var elements = document.querySelectorAll(".element");
   elements.forEach(element => {
     element.removeEventListener('click', handleclick);
@@ -137,17 +144,28 @@ document.querySelectorAll('.element').forEach(element => {
   // });
 });
 
-function counter(player){
-   if(player == 'X'){
-      xCounter++;
-      document.getElementById("xWinCounter").innerHTML = xCounter;
-   }
-    else if(player == 'O'){
-        yCounter++;
-        document.getElementById("yWinCounter").innerHTML = yCounter;
-    }
-    else{
-        drawCounter++;
-        document.getElementById("drawCounter").innerHTML = drawCounter;
-    }
+function counter(player) {
+  if (player == 'X') {
+    xCounter++;
+    document.getElementById("xWinCounter").innerHTML = xCounter;
+  }
+  else if (player == 'O') {
+    yCounter++;
+    document.getElementById("yWinCounter").innerHTML = yCounter;
+  }
+  else {
+    drawCounter++;
+    document.getElementById("drawCounter").innerHTML = drawCounter;
+  }
+}
+
+function changePlayer(currentPlayer) {
+  if (currentPlayer == 'X') {
+    nextPlayer = "O player";
+    console.log(nextPlayer);
+  }
+  else {
+    nextPlayer = "X player";
+    console.log(nextPlayer);
+  }
 }
