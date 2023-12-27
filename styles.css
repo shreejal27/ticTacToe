@@ -49,13 +49,14 @@ td {
 .board {
     /* border: 1px solid white; */
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 4rem;
     width: 19.4rem;
     height: 19.4rem;
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .element {
@@ -105,4 +106,8 @@ td {
     justify-content: center;
     align-items: center;
     font-size: 4.5rem;
+}
+
+#resetBtn{
+    cursor: pointer;
 }

@@ -169,3 +169,12 @@ function changePlayer(currentPlayer) {
     console.log(nextPlayer);
   }
 }
+
+function resetCounter() {
+  xCounter = 0;
+  yCounter = 0;
+  drawCounter = 0;
+  document.getElementById("xWinCounter").innerHTML = xCounter;
+  document.getElementById("yWinCounter").innerHTML = yCounter;
+  document.getElementById("drawCounter").innerHTML = drawCounter;
+}
